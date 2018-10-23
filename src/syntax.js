@@ -138,7 +138,7 @@ const configFactory = type => {
         name: 'js/ts variable.other.constant',
         scope: 'variable.other.constant',
         settings: {
-          foreground: colorObj['chalky']
+          foreground: colorObj['whiskey']
         }
       },
       {
@@ -268,7 +268,7 @@ const configFactory = type => {
       },
       {
         name: 'entity.name.type.module',
-        scope: 'entity.name.type.module',
+        scope: ['entity.name.type.module', 'meta.brace.curly.jsdoc'],
         settings: {
           foreground: colorObj['chalky']
         }
@@ -301,7 +301,9 @@ const configFactory = type => {
           'keyword.operator.expression.instanceof',
           'keyword.operator.new',
           'keyword.operator.ternary',
-          'keyword.operator.optional'
+          'keyword.operator.optional',
+          'keyword.operator.delete',
+          'keyword.operator.typeof'
         ],
         settings: {
           foreground: colorObj['purple']
@@ -336,6 +338,18 @@ const configFactory = type => {
         }
       },
       {
+        name: 'js/ts Keyword',
+        scope: [
+          'keyword.operator.accessor',
+          'support.type.object.process',
+          'support.type.object.node',
+          'entity.name.type.instance.jsdoc'
+        ],
+        settings: {
+          foreground: colorObj['fountainBlue']
+        }
+      },
+      {
         name: 'js dom',
         scope: 'support.type.object.dom',
         settings: {
@@ -352,7 +366,7 @@ const configFactory = type => {
       {
         name: 'keyword.operator',
         scope:
-          'keyword.operator.arithmetic,keyword.operator.comparison,keyword.operator.decrement,keyword.operator.increment',
+          'keyword.operator.arithmetic,keyword.operator.accessor,keyword.operator.comparison,keyword.operator.decrement,keyword.operator.increment',
         settings: {
           foreground: colorObj['fountainBlue']
         }
@@ -1315,7 +1329,7 @@ const configFactory = type => {
           'punctuation.section.embedded'
         ],
         settings: {
-          foreground: colorObj['purple']
+          foreground: colorObj['red']
         }
       },
       {
@@ -1430,7 +1444,8 @@ const configFactory = type => {
         name: 'template literal',
         scope: ['punctuation.quasi.element'],
         settings: {
-          foreground: colorObj['purple']
+          foreground: colorObj['green'],
+          background: colorObj['green']
         }
       },
       {
